@@ -10,6 +10,7 @@ class BOT
   TOKEN_SECRET = ""
   
   def initialize()
+    Dir.mkdir("KEYS") unless File.exist?("KEYS")
     API_KEY << checkKeys("KEYS/API_KEY")
     API_SECRET << checkKeys("KEYS/API_SECRET")
     TOKEN << checkKeys("KEYS/TOKEN")
