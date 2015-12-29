@@ -18,7 +18,7 @@ class BOT
     @TOKEN = checkKeys("KEYS/TOKEN")
     @TOKEN_SECRET = checkKeys("KEYS/TOKEN_SECRET")
 
-    @CLIENT = Twitter::REST::Client.new do |config|
+    @client = Twitter::REST::Client.new do |config|
       config.consumer_key = @API_KEY
       config.consumer_secret = @API_SECRET
       config.access_token        = @TOKEN
@@ -40,7 +40,7 @@ class BOT
   end
 
   def tweet(message)
-    @CLIENT.update(message)
+    @client.update(message)
   end
 
 end
