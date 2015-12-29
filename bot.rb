@@ -4,12 +4,6 @@
 require "twitter"
 
 class BOT 
-  #API_KEY = ""
-  #API_SECRET = ""
-  #TOKEN = ""
-  #TOKEN_SECRET = ""
-
-  #@CLIENT
 
   def initialize()
     Dir.mkdir("KEYS") unless File.exist?("KEYS")
