@@ -20,6 +20,17 @@ class BOT
     end
 
   end
+
+  def getReply()
+    @client.mentions.reverse_each{|status|
+      p status.id
+      p status.user.screen_name
+      p status.text
+    }
+    
+#return replyMessage
+  end
+   
   
   def checkKeys(path)
     #ファイルがあるけど中身が空の時もファイルが無かった時と同じようなメッセージ出すか
@@ -40,4 +51,5 @@ class BOT
 end
 
 bot = BOT.new
-bot.tweet("ほげらっぱ")
+#bot.tweet("ほげらっぱ")
+#puts bot.getReply()
